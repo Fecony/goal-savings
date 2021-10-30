@@ -1,0 +1,54 @@
+
+.github {
+  display: inline-block;
+  width: 125px;
+  height: 100%;
+  background: #ffe066;
+  position: relative;
+  overflow: hidden;
+
+  &__container {
+    padding: 25px;
+    flex-direction: column;
+    height: inherit;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-top: 35px;
+  }
+
+  &:hover .text {
+    opacity: 35%;
+  }
+}
+
+.info,
+.github__logo {
+  display: inline-block;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.github__logo {
+  transition: opacity 300ms ease-in-out;
+
+  &:hover {
+    opacity: 85%;
+  }
+}
+
+.text {
+  color: #ffffff;
+  opacity: 15%;
+  font-size: 170px;
+  position: absolute;
+  top: 240px;
+  transform: rotate(-90deg);
+  cursor: default;
+  font-weight: bold;
+  user-select: none;
+  transition: opacity 300ms ease-in-out;
+}
